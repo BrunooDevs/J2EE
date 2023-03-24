@@ -1,0 +1,123 @@
+.contenedorimg{
+
+    color:white;
+    justify-content: center;
+    position: relative;
+    display: flex;
+    background-color: #3F434E;
+
+}
+
+.contenedorimg img{
+    position: absolute;
+    margin-top: 25px;
+    border-radius: 100px;
+    display: flex;
+
+}
+
+.contenedorimg h3{
+    padding-top: 150px;
+    text-align: center;
+}
+
+.contenedorfoto{
+
+    display: none;
+    display: flex;
+    color: transparent;
+
+}
+.custom-file-input::-webkit-file-upload-button {
+    visibility: hidden;
+
+}
+.custom-file-input::before {
+    content: 'Editar foto';
+    display: inline-block;
+    border-radius: 3px;
+    padding: 5px 8px;
+    outline: none;
+    white-space: nowrap;
+    -webkit-user-select: none;
+    cursor: pointer;
+    text-shadow: 1px 1px #fff;
+    font-weight: 700;
+    font-size: 10pt;
+}
+.custom-file-input:hover::before {
+    border-color: black;
+
+
+}
+.custom-file-input:active::before {
+    background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
+
+}
+
+.sombra{
+    background-image: linear-gradient(to top ,#2F323B 35%,#B376D6 120% );
+}
+
+.noticias {
+
+    background-image: url(../img/2.jpg);
+    background-repeat: no-repeat;
+    background-position: inherit;
+    magin-top: 100px;
+    padding-bottom: 200px;
+    background-size: cover; 
+}
+
+
+
+.noticias h1{
+    color:white;
+    display: flex;
+    justify-content: center;
+}
+
+.sombraciclo{
+    -webkit-box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    -moz-box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    background-color:white;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 25px;
+}
+
+
+.sombraciclo h3{
+    color:#56BAED;
+
+
+}
+
+.sombraciclo p{
+    color:black;
+}
+
+body{
+    font-family: 'Lateef', cursive;
+
+}
+
+
+
+.sombraciclo{
+    -webkit-box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    -moz-box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    background-color:white;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 25px;
+}
+
+.sombradiagnostico{
+ 
+    border-radius: 0px;
+  
+}
+

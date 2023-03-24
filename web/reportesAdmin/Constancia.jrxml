@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.16.0-48579d909b7943b64690c65c71e07e0b80981928  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Constancia" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="0" uuid="e9bb1a27-f975-4aa4-98f9-75524c5daafa">
+	<property name="com.jaspersoft.studio.data.sql.tables">
+		<![CDATA[bWVkaWNvcyBBUyAsMTUsMTUsN2MwZDk4YjctYjRmMi00MjhlLWI4MjEtZDFjNzFiMzZhYzNmO3Bl
+cnNvbmFzIEFTICwxMzgsMjUsYTIwYmUwZGYtNDg1Yi00MjE0LTg1MmEtODFiZmUzYWZiNDg3Ow==]]>
+	</property>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Hospital"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#FFFFFF" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="ID_PERSONA" class="java.lang.Integer">
+		<parameterDescription><![CDATA[Recibe ID Del Medico]]></parameterDescription>
+	</parameter>
+	<queryString language="SQL">
+		<![CDATA[SELECT  * FROM medicos AS m INNER JOIN personas AS p ON m.id_medico=p.id_persona WHERE p.id_persona=$P{ID_PERSONA}]]>
+	</queryString>
+	<field name="id_medico" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="id_medico"/>
+		<property name="com.jaspersoft.studio.field.label" value="id_medico"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombre" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.label" value="nombre"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="especialidad" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="especialidad"/>
+		<property name="com.jaspersoft.studio.field.label" value="especialidad"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="medicos"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidos" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="apellidos"/>
+		<property name="com.jaspersoft.studio.field.label" value="apellidos"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="personas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="fecha_nac" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="fecha_nac"/>
+		<property name="com.jaspersoft.studio.field.label" value="fecha_nac"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="personas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="tel" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="tel"/>
+		<property name="com.jaspersoft.studio.field.label" value="tel"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="personas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="correo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="correo"/>
+		<property name="com.jaspersoft.studio.field.label" value="correo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="personas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="domicilio" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="domicilio"/>
+		<property name="com.jaspersoft.studio.field.label" value="domicilio"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="personas"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="822" splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="180" splitType="Stretch">
+			<staticText>
+				<reportElement style="Title" x="80" y="0" width="400" height="50" uuid="524767a9-e7e5-4041-9b08-5a7210b38e22"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="30" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Constancia Del Hospital]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="382" y="53" width="173" height="20" forecolor="#000000" uuid="f8570c2f-4404-4725-885a-4eb3c26abb4a"/>
+				<textElement textAlignment="Right">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="382" y="73" width="173" height="30" uuid="96f59698-c654-4953-9664-f96f3ee55584"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Cuernavaca, Morelos]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="137" y="129" width="343" height="20" uuid="2c831b3f-23c3-4b30-80a0-ce9a39e49d17"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="15"/>
+				</textElement>
+				<text><![CDATA[GERENTE DE AREA ADMINISTRATIVA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="215" y="159" width="125" height="20" uuid="fcc85cb4-5333-4731-8e80-80f9e15aaf27"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="15"/>
+				</textElement>
+				<text><![CDATA[HACE CONSTAR:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="642" splitType="Stretch">
+			<textField>
+				<reportElement x="370" y="122" width="100" height="6" uuid="85aee467-f639-4636-9162-cc8b6ff5444e"/>
+				<textFieldExpression><![CDATA[$P{ID_PERSONA}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="41" width="159" height="19" uuid="46e9cf16-dc01-485b-a596-806adefcbd88"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Que el médico con el nombre ]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="190" y="41" width="70" height="18" uuid="248c8811-cdfe-45ce-8f98-dfdc7786a79b"/>
+				<textElement textAlignment="Right">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombre} ]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="41" width="79" height="18" uuid="8b662120-baae-4717-8390-0d3ec4fac5cf"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidos} ]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="360" y="41" width="159" height="19" uuid="de598f4a-e1cc-44dd-8ece-73850d8c12a6"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[, identificado con el número de]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="61" width="50" height="19" uuid="36759871-0aaa-4201-b4a0-f9b400d3df9b"/>
+				<textElement>
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[registro]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="90" y="61" width="70" height="18" uuid="ca80a87e-56f8-4733-aecd-e46832fd99b0"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id_medico}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="179" y="61" width="339" height="19" uuid="48d07817-3278-4b03-9794-567cc5cb004a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[ejerce en esta empresa el cargo de médico con especialidad en]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="20" y="81" width="70" height="18" uuid="e9474b4b-ed1d-4358-a15a-a8b895ed0410"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{especialidad}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="100" y="81" width="418" height="19" uuid="c1375383-e896-4e35-b1bf-87945e11a1dd"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[y certificando sus datos de localización como lo son los siguientes:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="111" width="59" height="19" uuid="3d39f682-24ad-4100-ba96-02f43dcc285a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Domicilio:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="111" width="179" height="18" uuid="fa923709-85ad-4e3e-81e4-645dd1f580e2"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{domicilio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="100" y="142" width="179" height="18" uuid="01648708-fa1a-40df-b356-60dd6e75eeeb"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tel}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="142" width="59" height="19" uuid="9760c54a-afe3-4203-98ae-51501142851a"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="171" width="59" height="19" uuid="7b7e7610-0175-46e4-b2a3-e97c39302883"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[E-mail:]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="100" y="171" width="179" height="18" uuid="2a24ad70-ced3-43cb-bf13-bdb442723c94"/>
+				<textElement textAlignment="Left">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{correo}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="210" width="179" height="19" uuid="77474d73-5428-426d-bb45-20f570ac4d7e"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Esta constancia se expide el dia]]></text>
+			</staticText>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement style="Column header" x="210" y="209" width="160" height="20" forecolor="#000000" uuid="0501a504-ddcc-463b-8cf8-5409c5c4ef3f"/>
+				<textElement textAlignment="Left">
+					<font size="12" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="382" y="210" width="148" height="19" uuid="15f7553e-5da5-4995-ba3f-565714da35f8"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[con el fin de entregarlo a interesados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="230" width="148" height="19" uuid="9466bd7b-e7ed-4d1f-8b46-81e46a23ab6d"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[interesados en la misma.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="177" y="320" width="263" height="30" uuid="70781dc8-7cd1-40b5-abbe-772085612fb8"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="19"/>
+				</textElement>
+				<text><![CDATA[Sergio Rubén Ocampo Perez]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="226" y="350" width="128" height="19" uuid="84af7665-9d04-4fd8-963a-454d859d5eb3"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="12"/>
+				</textElement>
+				<text><![CDATA[Gerente Administrativo]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

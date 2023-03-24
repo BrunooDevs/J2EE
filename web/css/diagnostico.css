@@ -1,0 +1,27 @@
+
+.sombraciclo{
+    -webkit-box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    -moz-box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    box-shadow: -2px 11px 15px 0px rgba(143,130,143,0.71);
+    background-color:white;
+    padding: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 25px;
+}
+
+.sombradiagnostico{
+ 
+    border-radius: 0px;
+  
+}
+
+
+.sombraciclo h3{
+    color:#56BAED;
+
+
+}
+
+.sombraciclo p{
+    color:black;
+}
